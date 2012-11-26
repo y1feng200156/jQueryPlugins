@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 	<title></title>
 	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="checkBoxPlugin.js"></script>
+	<script type="text/javascript" src="jquery.checkBoxPlugin.1.0.0.js"></script>
 </head>
 <body id="body">
 	<input type="checkbox" id="allck" />/<input type="button" id="inbtn" value="反选"/>
@@ -21,7 +21,7 @@
 		$("#allck").ckbPlg({
 			childCk:".checkchild",
 			invertElm:"#inbtn",
-			autoCheckTrigger：true,
+			autoCheckTrigger:true,
 			isCheckDisabled:false,
 			beforeAll:function(){
 				alert("Click 'All Button' before.");

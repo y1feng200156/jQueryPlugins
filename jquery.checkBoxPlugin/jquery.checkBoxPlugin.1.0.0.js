@@ -84,8 +84,8 @@
 			}
 		},
 		_onChildCheck: function(elm) {
-			if(_options.onChildCheck != null) {
-				_options.onChildCheck(elm);
+			if(_options.onChild != null) {
+				_options.onChild(elm);
 			}
 			this._cooperationAllElm();
 		},
