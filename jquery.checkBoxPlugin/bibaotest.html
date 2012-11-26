@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="checkBoxPlugin.js"></script>
+</head>
+<body id="body">
+	<input type="checkbox" id="allck" />/<input type="button" id="inbtn" value="反选"/>
+	<input type="checkbox" class="checkchild" disabled="disabled" />
+	<input type="checkbox" class="checkchild" value="1" />
+	<input type="checkbox" class="checkchild" value="2" />
+	<input type="checkbox" class="checkchild" value="3" />
+	<input type="checkbox" class="checkchild" value="4" />
+	<input type="checkbox" class="checkchild" value="5" />
+	<input type="checkbox" class="checkchild" value="6" />
+	<input type="checkbox" class="checkchild" value="7" />
+	<div id="log"></div>
+	<script type="text/javascript">
+		$("#allck").ckbPlg({
+			childCk:".checkchild",
+			invertElm:"#inbtn",
+			autoCheckTrigger：true,
+			isCheckDisabled:false,
+			beforeAll:function(){
+				alert("Click 'All Button' before.");
+			},
+			beforeInvert:function(elm){
+				alert("Click 'Invert Button' before.");
+			},
+			onAll:function(){
+				alert("Click 'All Button'.");
+			},
+			onInvert:function(elm){
+				alert("Click 'All Invert'.Elm is now click button.");
+			},
+			onChild :function(elm){
+				alert("Click 'Child checkbox'.Elm is now click button.");
+			}
+		});
+	</script>
+</body>
+</html>
